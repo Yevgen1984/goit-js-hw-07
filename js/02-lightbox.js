@@ -15,15 +15,10 @@ const newImg = galleryItems
   )
   .join("");
 
-list.insertAdjacentHTML("beforeend", newImg);
+  list.insertAdjacentHTML("beforeend", newImg);
 
-const lightbox = new SimpleLightbox(".gallery .gallery__item", {
-  captionDelay: 250,
-  captionsData: "alt",
-});
-list.addEventListener("click", (e) => {
-  e.preventDefault();
-  lightbox.open();
-});
-
-console.log(galleryItems);
+  const lightbox = new SimpleLightbox(".gallery .gallery__item", {
+    captionDelay: 250,
+    captionsData: "alt",
+  });
+  lightbox.next();
